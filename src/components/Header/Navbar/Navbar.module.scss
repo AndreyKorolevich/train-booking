@@ -1,0 +1,16 @@
+@import "../../../variables";
+
+.navbar {
+  height: 94px;
+  @include fontFamily300;
+  font-size: $size-px30;
+  line-height: $size-px35;
+
+  .item {
+    margin-right: 75px;
+
+    a:first-child {
+      padding-left: 0!important;
+    }
+  }
+}

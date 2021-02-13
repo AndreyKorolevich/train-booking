@@ -1,0 +1,16 @@
+.header {
+  height: 985px;
+  background-image: url('../../img/header-train.png');
+  background-repeat: no-repeat;
+  filter: contrast(1.1);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 977px;
+    height: 8px;
+    width: 100%;
+    background-color: #FFA800;
+  }
+}
