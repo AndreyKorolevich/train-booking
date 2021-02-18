@@ -1,16 +1,13 @@
 import React from 'react';
-import DatePicker from 'react-datepicker';
+import DatePicker, { ReactDatePickerProps } from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-interface DateInputI {
+interface DateInputI extends ReactDatePickerProps {
   label?: string;
-  className?: string;
-  minDate: Date;
-  startDate: Date;
-  setDate: (date: Date) => void;
-  maxDate?: number;
+  onChange: (date: Date) => void;
 }
 
-const DateInput: React.FC<DateInputI> = ({ label, className, minDate, startDate, setDate, maxDate }) => {
+const DateInput: React.FC<DateInputI> = ({ label, className, minDate, startDate, onChange, maxDate }) => {
   return (
     <div className='custom-date'>
       <div>
@@ -20,7 +17,7 @@ const DateInput: React.FC<DateInputI> = ({ label, className, minDate, startDate,
         className={`date ${className}`}
         dateFormat='dd MMM yyyy'
         selected={startDate}
-        onChange={(date: Date) => setDate(date)}
+        onChange={(date: Date) => onChange(date)}
         popperClassName='custom-class'
         maxDate={maxDate}
         minDate={minDate}

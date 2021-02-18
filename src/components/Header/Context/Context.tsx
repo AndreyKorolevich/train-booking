@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchTickets from './SearchingTickets';
 
 const Context: React.FC = () => (
   <div className='container'>
@@ -8,6 +9,7 @@ const Context: React.FC = () => (
           <h1 className='header-context__title'>
             Вся жизнь - <span>путешестивие</span>
           </h1>
+          <SearchTickets />
         </div>
       </div>
     </div>
