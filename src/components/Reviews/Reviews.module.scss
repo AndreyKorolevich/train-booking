@@ -1,0 +1,14 @@
+@import "../../variables";
+
+.reviews {
+  li {
+    background-color: $carousel-indicators-color;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .active {
+    background-color: $active-carousel-indicators-color;
+  }
+}
