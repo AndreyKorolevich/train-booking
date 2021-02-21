@@ -1,14 +1,42 @@
+@mixin fontFamily400 {
+  font-style: normal;
+  font-weight: 400;
+}
+
 @mixin fontFamily300 {
   font-style: normal;
   font-weight: 300;
 }
 
+@mixin fontFamily200 {
+  font-style: normal;
+  font-weight: 200;
+}
+
+@mixin fontFamily700 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+@keyframes rotateDirection {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
 $base-text-color: white;
 $base-background-color: #E5E5E5;
+$search-background: rgba(41, 41, 41, 0.8);
 $carousel-indicators-color: #E5E5E5;
 $active-carousel-indicators-color: #C4C4C4;
 
 $size-px30: 30px;
 $size-px35: 35px;
+$size-px72: 72px;
+$size-px84: 84px;
 
 

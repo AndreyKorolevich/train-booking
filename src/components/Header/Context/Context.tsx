@@ -1,13 +1,15 @@
 import React from 'react';
-import SearchTickets from './SearchingTickets';
+import cn from 'classnames';
+import styles from './Context.module.scss';
+import SearchTickets from './SearchTickets/SearchingTickets';
 
 const Context: React.FC = () => (
-  <div className='container'>
+  <div className={cn('container', styles.context)}>
     <div className='row'>
       <div className='col'>
-        <div className='header-context'>
-          <h1 className='header-context__title'>
-            Вся жизнь - <span>путешестивие</span>
+        <div className={styles.header}>
+          <h1 className={styles.title}>
+            Вся жизнь - <span className={styles.titleTravel}>путешестивие!</span>
           </h1>
           <SearchTickets />
         </div>

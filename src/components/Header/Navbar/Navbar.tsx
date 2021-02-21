@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import styles from './Navbar.module.scss';
 import { NAVBAR } from '../../../constants/navbar_constants';
 
@@ -10,9 +10,15 @@ const Navbar: React.FC = () => (
         <ul className='navbar-nav mr-auto'>
           {NAVBAR.map(e => (
             <li key={e.value} className={`nav-item ${styles.item}`}>
-              <NavLink className='nav-link' to={e.link}>
+              <Link
+                className='nav-link'
+                to={e.link}
+                activeClass='active'
+                spy={true}
+                smooth={true}
+                duration={500}>
                 {e.value}
-              </NavLink>
+              </Link>
             </li>
           ))}
         </ul>

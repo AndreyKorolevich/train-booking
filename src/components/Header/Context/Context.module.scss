@@ -1,0 +1,24 @@
+@import "../../../variables";
+
+.context {
+  margin-top: 270px;
+  padding-left: 90px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      @include fontFamily200;
+      width: 506px;
+      color: $base-text-color;
+      font-size: $size-px72;
+      line-height: $size-px84;
+
+      .titleTravel {
+        @include fontFamily700;
+      }
+    }
+  }
+}
+

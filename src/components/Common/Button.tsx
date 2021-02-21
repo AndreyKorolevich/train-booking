@@ -4,7 +4,7 @@ import cn from 'classnames';
 interface ButtonI {
   className?: string;
   onClick: (e: React.FormEvent) => void;
-  children?: string | React.Component;
+  children?: string | React.ReactChild;
   disabled?: boolean;
 }
 

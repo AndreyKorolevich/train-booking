@@ -1,18 +1,18 @@
 export const NAVBAR = [
   {
     value: 'О нас',
-    link: '/about',
+    link: 'about',
   },
   {
     value: 'Как это работает',
-    link: '/explanation',
+    link: 'explanation',
   },
   {
     value: 'Отзыв',
-    link: '/reviews',
+    link: 'reviews',
   },
   {
     value: 'Контакты',
-    link: '/contacts',
+    link: 'contacts',
   },
 ];

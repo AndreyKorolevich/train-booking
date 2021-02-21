@@ -12,12 +12,12 @@ interface InputI {
 
 const Input: React.FC<InputI> = ({ className, onChange, label, placeholder, value, name, type }) => {
   return (
-    <div className={className}>
+    <div>
       {label && <label className='label'>{label}</label>}
       <input
         onChange={onChange}
         type={type}
-        className='input'
+        className={className}
         placeholder={placeholder}
         value={value}
         name={name}
