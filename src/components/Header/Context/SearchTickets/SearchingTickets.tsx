@@ -4,12 +4,11 @@ import styles from './SearchTickets.module.scss';
 import change from '../../../../img/changeDirection.svg';
 import Button from '../../../Common/Button';
 import Input from '../../../Common/Input';
-import DateInput from '../../../Common/DateInput';
+import DateInput from '../../../Common/DateInput/DateInput';
 
 const SearchTickets: React.FC = () => {
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
-  const [imgStyle, setImgStyle] = useState({});
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const maxDate = 90;
@@ -25,12 +24,6 @@ const SearchTickets: React.FC = () => {
   const changeDirection = (): void => {
     setFrom(to);
     setTo(from);
-    setImgStyle({
-      animation: '0.4s ease-out forwards rotateDirection',
-    });
-    setTimeout(() => {
-      setImgStyle({});
-    }, 400);
   };
 
   return (
@@ -48,7 +41,7 @@ const SearchTickets: React.FC = () => {
                 placeholder='Откуда'
               />
               <Button className={styles.change} onClick={changeDirection}>
-                <img style={imgStyle} src={change} alt='Button`s icon' />
+                <img src={change} alt='Button`s icon' />
               </Button>
               <Input
                 className={styles.input}
@@ -58,8 +51,10 @@ const SearchTickets: React.FC = () => {
                 placeholder='Куда'
               />
             </div>
-            <DateInput label='Start' minDate={new Date()} startDate={startDate} onChange={changeStartDate} />
-            <DateInput label='End' startDate={endDate} minDate={startDate} onChange={setEndDate} />
+            <div className={styles.range}>
+              <DateInput minDate={new Date()} startDate={startDate} onChange={changeStartDate} />
+              <DateInput startDate={endDate} minDate={startDate} onChange={setEndDate} />
+            </div>
             <Button className='btn-primary' onClick={handleSubmit}>
               НАЙТИ БИЛЕТЫ
             </Button>

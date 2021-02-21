@@ -1,0 +1,33 @@
+@import "../../../variables";
+
+
+.react-datepicker-wrapper {
+  .date {
+    @include inputView
+  }
+
+  input {
+    @include disabledOutline;
+  }
+}
+
+.custom {
+  .react-datepicker {
+    width: 352px;
+    height: 302px;
+
+    .react-datepicker__current-month {
+      @include  fontFamily400;
+      font-size: $size-px24;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .react-datepicker__day-names {
+    display: none;
+  }
+}
+

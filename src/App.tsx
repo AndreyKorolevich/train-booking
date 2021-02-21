@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Element, Link } from 'react-scroll';
+import { Element } from 'react-scroll';
 import './App.css';
 import Header from './components/Header/Header';
 import About from './components/About/About';

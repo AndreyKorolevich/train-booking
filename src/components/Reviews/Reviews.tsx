@@ -6,7 +6,7 @@ import CardReview from './CardRevie';
 const Reviews: React.FC = () => {
   const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex: number, e: Record<string, unknown> | null) => {
+  const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
   return (
