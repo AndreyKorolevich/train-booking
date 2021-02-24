@@ -1,0 +1,6 @@
+@import "../../../variables";
+
+.button {
+  @include fontFamily700;
+  font-size: $size-px24;
+}

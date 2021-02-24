@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import styles from './SearchTickets.module.scss';
 import change from '../../../../img/changeDirection.svg';
-import Button from '../../../Common/Button';
+import Button from '../../../Common/Button/Button';
 import Input from '../../../Common/Input';
 import DateInput from '../../../Common/DateInput/DateInput';
 
@@ -31,7 +31,7 @@ const SearchTickets: React.FC = () => {
       <div className='card-body'>
         <h5 className={cn('card-title', styles.title)}>Направление</h5>
         <p className='card-text'>
-          <form onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.direction}>
               <Input
                 className={styles.input}
@@ -55,7 +55,7 @@ const SearchTickets: React.FC = () => {
               <DateInput minDate={new Date()} startDate={startDate} onChange={changeStartDate} />
               <DateInput startDate={endDate} minDate={startDate} onChange={setEndDate} />
             </div>
-            <Button className='btn-primary' onClick={handleSubmit}>
+            <Button className={cn('btn-warning', styles.button)} onClick={handleSubmit}>
               НАЙТИ БИЛЕТЫ
             </Button>
           </form>

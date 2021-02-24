@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Common/Button';
+import Button from '../Common/Button/Button';
 
 const HowIsItWork: React.FC = () => {
   return (

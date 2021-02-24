@@ -12,10 +12,16 @@
     @include fontFamily300;
     font-size: $size-px30;
     line-height: $size-px35;
-    color: $base-text-color;
+    color: $base-link-color;
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .direction {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 113px;
@@ -46,8 +52,17 @@
 
   .range {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     margin-bottom: 92px;
+  }
+
+  .button {
+    margin-left: auto;
+    width: 323px;
+    height: 60px;
+    color: $base-search-text-color;
+    background: #FFA800;
   }
 }
 
