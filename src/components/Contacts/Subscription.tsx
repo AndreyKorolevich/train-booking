@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Input from '../Common/Input';
-import Button from '../Common/Button';
+import Button from '../Common/Button/Button';
 
 const Subscription: React.FC = () => {
   const [email, setEmail] = useState('');

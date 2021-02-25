@@ -26,6 +26,13 @@
   border-radius: 5px;
   padding: 19px 15px 11px 21px;
 }
+@mixin selectDay {
+  background: $select-day-background;
+  border: 2px solid #FFA800;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: $base-text-color;
+}
 
 @mixin disabledOutline {
   outline: 0!important;
@@ -42,12 +49,16 @@
   }
 }
 
-$base-text-color: white;
+$base-link-color: white;
+$base-text-color: black;
+$base-search-text-color: #292929;
 $base-background-color: #E5E5E5;
 $search-background: rgba(41, 41, 41, 0.8);
+$select-day-background: rgba(255, 168, 0, 0.31);
 $carousel-indicators-color: #E5E5E5;
 $active-carousel-indicators-color: #C4C4C4;
 
+$size-px20: 20px;
 $size-px24: 24px;
 $size-px30: 30px;
 $size-px35: 35px;

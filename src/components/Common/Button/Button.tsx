@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import styles from './Button.module.scss';
 
 interface ButtonI {
   className?: string;
@@ -11,7 +12,7 @@ interface ButtonI {
 const Button: React.FC<ButtonI> = props => (
   <button
     type='button'
-    className={cn('btn', props.className)}
+    className={cn('btn', props.className, styles.button)}
     onClick={props.onClick}
     disabled={props.disabled}>
     {props.children}

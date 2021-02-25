@@ -1,7 +1,7 @@
 import React from 'react';
 import { ru } from 'date-fns/esm/locale';
 import './DateInput.scss';
-import DatePicker, { ReactDatePickerProps, registerLocale } from 'react-datepicker';
+import DatePicker, { CalendarContainer, ReactDatePickerProps, registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 interface DateInputI extends ReactDatePickerProps {
