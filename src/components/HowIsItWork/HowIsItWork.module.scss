@@ -1,0 +1,65 @@
+@import "../../variables";
+
+.work {
+  height: 575px;
+  background-image: url('../../img/howisitwork.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #FFA800;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  .block, .header, .li {
+    background: none;
+    border: none;
+  }
+
+  .block {
+    padding-top: 70px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    font-size: $size-px36;
+    line-height: $size-px42;
+    color: $base-link-color;
+  }
+
+  .body {
+    padding: 70px 100px;
+  }
+
+  .button {
+    @include originSizeButton;
+    font-size: $size-px24;
+    line-height: $size-px28;
+
+    &:hover {
+      background-color: $light-orange-color;
+      border-color: $light-orange-color;
+    }
+  }
+
+  .list {
+    justify-content: space-between;
+    width: 938px;
+  }
+
+  .li {
+    @include fontFamily400;
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    color: $base-link-color;
+    font-size: $size-px24;
+    line-height: $size-px28;
+    text-align: center;
+
+    img {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: $size-px34;
+    }
+  }
+}
