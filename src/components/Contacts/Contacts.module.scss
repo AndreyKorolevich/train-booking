@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+.footer {
+  color: $base-link-color;
+  background-color: $footer-background;
+}
+
+.body {
+  display: flex;
+  padding-top: 50px;
+  padding-left: 5rem;
+}
+
+.clickme {
+  border-top: $base-link-color 1px solid;
+}
+
+.grop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  @include fontFamily900;
+  font-size: $size-px36;
+}
+
+.web {
+  @include fontFamily300;
+  font-size: $size-px24;
+}

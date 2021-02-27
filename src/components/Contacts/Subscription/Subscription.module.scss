@@ -1,0 +1,45 @@
+@import '../../../variables.scss';
+
+.title {
+  @include fontFamily500;
+  font-size: $size-px30;
+  line-height: $size-px35;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.underTitle {
+  @include fontFamily400;
+  font-size: $size-px24;
+  line-height: $size-px28;
+  text-align: left;
+}
+
+.form {
+  display: flex;
+
+  .input {
+    width: 447px;
+    height: 60px;
+    margin-right: 33px;
+    border-radius: 5px;
+    font-size: $size-px24;
+    box-sizing: border-box;
+    padding: 17px 21px;
+
+    &::placeholder {
+      color: $carousel-indicators-color;
+    }
+  }
+
+  .button {
+    @include fontFamily400;
+    font-size: $size-px24;
+    line-height: $size-px28;
+
+    &:hover {
+      background-color: $light-orange-color;
+      border-color: $light-orange-color;
+    }
+  }
+}

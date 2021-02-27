@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import styles from './Reviews.module.scss';
-import CardReview from './CardRevie';
+import Carousel from 'react-bootstrap/Carousel';
+import CardReview from './CardRevie/CardRevie';
 
 const Reviews: React.FC = () => {
   const [index, setIndex] = useState(0);
@@ -11,17 +11,20 @@ const Reviews: React.FC = () => {
   };
   return (
     <div className={styles.reviews}>
-      <Carousel activeIndex={index} onSelect={handleSelect} controls={false}>
-        <Carousel.Item>
-          <CardReview />
-        </Carousel.Item>
-        <Carousel.Item>
-          <CardReview />
-        </Carousel.Item>
-        <Carousel.Item>
-          <CardReview />
-        </Carousel.Item>
-      </Carousel>
+      <div className='container'>
+        <h5 className={styles.title}>ОТЗЫВЫ</h5>
+        <Carousel activeIndex={index} onSelect={handleSelect} controls={false}>
+          <Carousel.Item>
+            <CardReview />
+          </Carousel.Item>
+          <Carousel.Item>
+            <CardReview />
+          </Carousel.Item>
+          <Carousel.Item>
+            <CardReview />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </div>
   );
 };

@@ -29,7 +29,7 @@ module.exports = {
     'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
+    'prettier/prettier': ['off', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
   },

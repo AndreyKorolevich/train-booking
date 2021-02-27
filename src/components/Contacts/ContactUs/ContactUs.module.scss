@@ -1,0 +1,35 @@
+@import '../../../variables.scss';
+
+.contactUs {
+  width: 340px;
+  margin-right: 254px;
+
+  .title {
+    @include fontFamily500;
+    font-size: $size-px30;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: flex;
+      margin-bottom: 30px;
+
+      a {
+        @include fontFamily400;
+        font-size: $size-px24;
+        line-height: $size-px28;
+        margin-left: 36px;
+        text-align: left;
+
+        &:hover {
+          text-decoration: none;
+          color: $light-orange-color;
+        }
+      }
+    }
+  }
+}
