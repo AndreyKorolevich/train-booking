@@ -3,6 +3,11 @@
   font-weight: 700;
 }
 
+@mixin fontFamily500 {
+  font-style: normal;
+  font-weight: 500;
+}
+
 @mixin fontFamily400 {
   font-style: normal;
   font-weight: 400;
@@ -18,6 +23,11 @@
   font-weight: 200;
 }
 
+@mixin originSizeButton {
+  width: 323px;
+  height: 60px;
+}
+
 @mixin inputView {
   @include fontFamily400;
   font-size: 18px;
@@ -28,7 +38,7 @@
 }
 @mixin selectDay {
   background: $select-day-background;
-  border: 2px solid #FFA800;
+  border: 2px solid $orange-color;
   box-sizing: border-box;
   border-radius: 5px;
   color: $base-text-color;
@@ -52,16 +62,22 @@
 $base-link-color: white;
 $base-text-color: black;
 $base-search-text-color: #292929;
-$base-background-color: #E5E5E5;
+$base-background-color: white;
 $search-background: rgba(41, 41, 41, 0.8);
 $select-day-background: rgba(255, 168, 0, 0.31);
+$orange-color: #FFA800;
+$light-orange-color: #FFCA62;
 $carousel-indicators-color: #E5E5E5;
 $active-carousel-indicators-color: #C4C4C4;
 
 $size-px20: 20px;
 $size-px24: 24px;
+$size-px28: 28px;
 $size-px30: 30px;
+$size-px34: 34px;
 $size-px35: 35px;
+$size-px36: 36px;
+$size-px42: 42px;
 $size-px72: 72px;
 $size-px84: 84px;
 

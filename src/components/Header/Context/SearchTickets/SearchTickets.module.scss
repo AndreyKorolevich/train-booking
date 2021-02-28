@@ -1,7 +1,5 @@
 @import "../../../../variables";
 
-
-
 .search {
   width: 729px;
   height: 574px;
@@ -59,8 +57,7 @@
 
   .button {
     margin-left: auto;
-    width: 323px;
-    height: 60px;
+    @include originSizeButton;
     color: $base-search-text-color;
     background: #FFA800;
   }

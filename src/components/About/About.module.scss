@@ -1,0 +1,41 @@
+@import "../../variables";
+
+.about {
+  height: 570px;
+  box-sizing: border-box;
+  border: none;
+  padding: 144px 0;
+
+  .title {
+    @include fontFamily500;
+    font-size: $size-px36;
+    line-height: $size-px42;
+  }
+
+  .body {
+    @include fontFamily400;
+    font-size: $size-px24;
+    line-height: $size-px28;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+
+    p{
+      margin-bottom: 2rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 231px;
+      width: 9px;
+      background-color: $orange-color;
+    }
+  }
+
+  .warn {
+    font-weight: 700;
+  }
+}
