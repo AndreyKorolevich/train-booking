@@ -1,3 +1,8 @@
+@mixin fontFamily900 {
+  font-style: normal;
+  font-weight: 900;
+}
+
 @mixin fontFamily700 {
   font-style: normal;
   font-weight: 700;
@@ -62,6 +67,7 @@
 $base-link-color: white;
 $base-text-color: black;
 $base-search-text-color: #292929;
+$footer-background: #2D2B2F;
 $base-background-color: white;
 $search-background: rgba(41, 41, 41, 0.8);
 $select-day-background: rgba(255, 168, 0, 0.31);

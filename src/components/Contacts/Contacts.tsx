@@ -1,50 +1,34 @@
 import React from 'react';
+import cn from 'classnames';
+import styles from './Contacts.module.scss';
+import close from '../../img/closeFoter.svg';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
-import ContactUs from './ContactUs';
-import Subscription from './Subscription';
+import ContactUs from './ContactUs/ContactUs';
+import Subscription from './Subscription/Subscription';
+import Address from './Address/Address';
 
 const Contacts: React.FC = () => {
   return (
     <Accordion defaultActiveKey='0'>
-      <div className='card text-center'>
-        <Accordion.Collapse eventKey='0'>
-          <div className='card-body'>
-            <ContactUs />
-            <Subscription />
-            <address className='articles-socials'>
-              <ul className='socials'>
-                <li className='socials-item'>
-                  <a href='#0' className='socials-link socials-link-twitter'>
-                    <span className='socials-link-text'>twitter</span>
-                  </a>
-                </li>
-                <li className='socials-item'>
-                  <a href='#0' className='socials-link socials-link-pinterest'>
-                    <span className='socials-link-text'>pinterest</span>
-                  </a>
-                </li>
-                <li className='socials-item'>
-                  <a href='#0' className='socials-link socials-link-facebook'>
-                    <span className='socials-link-text'>facebook</span>
-                  </a>
-                </li>
-                <li className='socials-item'>
-                  <a href='#0' className='socials-link socials-link-instagram'>
-                    <span className='socials-link-text'>instagram</span>
-                  </a>
-                </li>
-                <li className='socials-item'>
-                  <a href='#0' className='socials-link socials-link-tumblr'>
-                    <span className='socials-link-text'>tumblr</span>
-                  </a>
-                </li>
-              </ul>
-            </address>
+      <div className={cn('card text-center', styles.footer)}>
+        <div className='container'>
+          <Accordion.Collapse eventKey='0'>
+            <div className={cn('card-body', styles.body)}>
+              <ContactUs />
+              <div>
+                <Subscription />
+                <Address />
+              </div>
+            </div>
+          </Accordion.Collapse>
+        </div>
+        <Accordion.Toggle className={styles.clickme} as={Card.Header} eventKey='0'>
+          <div className={cn('container', styles.grop)}>
+            <h5 className={styles.logo}>Лого</h5>
+            <img className={styles.close} src={close} alt='иконка закрытия' />
+            <cite className={styles.web}>2021 WEB</cite>
           </div>
-        </Accordion.Collapse>
-        <Accordion.Toggle as={Card.Header} eventKey='0'>
-          Click me!
         </Accordion.Toggle>
       </div>
     </Accordion>

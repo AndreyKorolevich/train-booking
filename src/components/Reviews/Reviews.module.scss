@@ -1,6 +1,24 @@
 @import "../../variables";
 
 .reviews {
+  height: 755px;
+  padding: 122px 0;
+
+  .title {
+    @include fontFamily500;
+    font-size: $size-px36;
+    line-height: $size-px42;
+    margin-bottom: 48px;
+  }
+
+  .item {
+    display: flex;
+  }
+
+  ol {
+    bottom: -150px;
+  }
+
   li {
     background-color: $carousel-indicators-color;
     width: 20px;

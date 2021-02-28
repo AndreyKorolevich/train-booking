@@ -1,0 +1,69 @@
+@import '../../../variables.scss';
+
+.title {
+  @include fontFamily500;
+  font-size: $size-px30;
+  line-height: $size-px35;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.articles {
+  .socials {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style-type: none;
+  }
+
+  .link {
+    display: block;
+    width: 50px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 28px;
+  }
+
+  .text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  .youtube {
+    background-image: url('../../../img/youtube.svg');
+    &:active {
+      background-image: url('../../../img/youtube-active.svg');
+    }
+  }
+
+  .linkedin {
+    background-image: url('../../../img/linkedin.svg');
+    &:active {
+      background-image: url('../../../img/linkedin-active.svg');
+    }
+  }
+
+  .google {
+    background-image: url('../../../img/google.svg');
+    &:active {
+      background-image: url('../../../img/google-active.svg');
+    }
+  }
+
+  .facebook {
+    background-image: url('../../../img/facebook.svg');
+    &:active {
+      background-image: url('../../../img/facebook-active.svg');
+    }
+  }
+
+  .twitter {
+    background-image: url('../../../img/twiter.svg');
+    &:active {
+      background-image: url('../../../img/twiter-active.svg');
+    }
+  }
+}
